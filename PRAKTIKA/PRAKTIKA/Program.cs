@@ -7,7 +7,7 @@ namespace PRAKTIKA
         static void Main(string[] args)
         {
             double a, b, Rad;
-
+            int variant;
             Console.WriteLine("1. Прямоугольник");
             Console.WriteLine("2. Круг");
             //Console.WriteLine("3. Треугольник");
@@ -15,8 +15,13 @@ namespace PRAKTIKA
             //Console.WriteLine("5. Сектор");
 
             string temp = Console.ReadLine();
-            int variant = Convert.ToInt32(temp);    // преобразование в число
-
+            try
+            {
+                variant = Convert.ToInt32(temp);    // преобразование в число
+            }
+            catch { variant = 0; }
+            try 
+            { 
             switch (variant)
             {
                 case 1:
@@ -38,6 +43,8 @@ namespace PRAKTIKA
 
                 default: Console.WriteLine("Выбор неверен "); break;
             }
+            }
+            catch { Console.WriteLine("Ошибка при вводе числа"); }
         }
     }
 }
