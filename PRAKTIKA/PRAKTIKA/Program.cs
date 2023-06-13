@@ -33,7 +33,7 @@ namespace PRAKTIKA
                     Console.Write("Радиус R = ");
                     temp = Console.ReadLine();
                     Rad = Convert.ToDouble(temp);
-                    Console.WriteLine("Площадь круга = " + 4 * Math.Atan(1) * Math.Pow(Rad, 2));
+                    Console.WriteLine("Площадь круга = " + 4 * Atan(1.0) * Pow(Rad, 2.0));
                     break;
 
                 default: Console.WriteLine("Выбор неверен "); break;
